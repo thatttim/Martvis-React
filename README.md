@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Martvis React Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created for the BTU React exam. It's a comprehensive React application that demonstrates various React concepts and modern web development practices.
 
-## Available Scripts
+## 🚀 Technologies Used
 
-In the project directory, you can run:
+### Core Technologies
+- **React 19.1.0** - Modern React with latest features
+- **React Router DOM 7.6.2** - Client-side routing
+- **React DOM 19.1.0** - React rendering for web
 
-### `npm start`
+### Styling & UI
+- **Sass 1.89.2** - Advanced CSS preprocessor
+- **SCSS** - Syntactically Awesome Style Sheets
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### HTTP & API
+- **Axios 1.10.0** - HTTP client for API requests
+- **Framework LLC API** - Backend services provided by Framework LLC
+  - Base URL: `https://api.framework.ge/martvis/api`
+  - Endpoints for vehicles, categories, languages, tickets, and exams
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Development & Testing
+- **React Scripts 5.0.1** - Create React App build tools
+- **@testing-library/react 16.3.0** - React testing utilities
+- **@testing-library/jest-dom 6.6.3** - Custom Jest matchers
+- **@testing-library/user-event 13.5.0** - User event simulation
+- **@testing-library/dom 10.4.0** - DOM testing utilities
+- **Web Vitals 2.1.4** - Web performance metrics
 
-### `npm test`
+### Project Structure
+- **Context API** - State management with LanguageContext and ThemeContext
+- **Custom Hooks** - Reusable logic (useApi, useFontLoader, useLocalStorage, usePageTitle)
+- **Component Architecture** - Modular component structure
+- **Service Layer** - API service abstraction
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔌 API Integration
 
-### `npm run build`
+This project integrates with **Framework LLC's API** (`https://api.framework.ge/martvis/api`) to provide:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Vehicle Data** - Information about different vehicle types
+- **Categories** - Question categories for different topics
+- **Languages** - Multi-language support
+- **Tickets** - Practice questions and tickets
+- **Exams** - Exam functionality and questions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The API service is implemented in `src/services/apiService.js` using Axios for HTTP requests with proper error handling and timeout configuration.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+martvis/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── BottomTabBar.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── LanguageModal.js
+│   │   ├── Preloader.js
+│   │   └── VehicleModal.js
+│   ├── contexts/           # React Context providers
+│   │   ├── LanguageContext.js
+│   │   └── ThemeContext.js
+│   ├── hooks/              # Custom React hooks
+│   │   ├── useApi.js
+│   │   ├── useFontLoader.js
+│   │   ├── useLocalStorage.js
+│   │   └── usePageTitle.js
+│   ├── pages/              # Main application pages
+│   │   ├── Home.js
+│   │   ├── Practice.js
+│   │   ├── Quiz.js
+│   │   └── Exam.js
+│   ├── services/           # API and external services
+│   │   └── apiService.js
+│   ├── styles/             # SCSS stylesheets
+│   └── utils/              # Utility functions
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- **Node.js** (version 16 or higher)
+- **npm** (comes with Node.js)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd martvis
+   ```
 
-## Learn More
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The application will open in your browser at `http://localhost:3000`
 
-### Code Splitting
+### Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **`npm start`** - Runs the app in development mode
+- **`npm test`** - Launches the test runner
+- **`npm run build`** - Builds the app for production
+- **`npm run eject`** - Ejects from Create React App (one-way operation)
 
-### Analyzing the Bundle Size
+## 🎯 Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Multi-language Support** - Internationalization with context
+- **Theme Management** - Dark/light theme switching
+- **Responsive Design** - Mobile-first approach
+- **Custom Hooks** - Reusable logic patterns
+- **API Integration** - External data fetching
+- **Routing** - Client-side navigation
+- **Testing Setup** - Comprehensive testing infrastructure
 
-### Making a Progressive Web App
+## 📱 Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Home** - Landing page
+- **Practice** - Practice mode
+- **Quiz** - Quiz functionality
+- **Exam** - Exam mode
 
-### Advanced Configuration
+## 🔧 Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project demonstrates:
+- Modern React patterns and best practices
+- Context API for state management
+- Custom hooks for reusable logic
+- SCSS for advanced styling
+- Component composition
+- Service layer architecture
+- Testing setup with React Testing Library
 
-### Deployment
+## 📝 Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project was created as part of the BTU React exam requirements, showcasing proficiency in React development, modern JavaScript, and web development best practices.
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is an exam project, but feel free to explore the code and learn from the implementation patterns used.
+
+## 📄 License
+
+This project is created for educational purposes as part of the BTU React exam. 

@@ -1,13 +1,116 @@
-body {
+@import url(https://cdn.framework.ge/fonts);
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Framework-Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Ensure all elements use Framework-Sans font */
+* {
+  font-family: 'Framework-Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Apply Framework-Sans-Caps to all headings and titles */
+h1, h2, h3, h4, h5, h6,
+.home-title,
+.practice-title,
+.exam-title,
+.quiz-title,
+.modal-title,
+.category-title,
+.sidebar-title,
+.mode-title {
+  font-family: 'Framework-Sans-Caps', 'Framework-Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  /* Colors */
+  --primary-color: #36E3D6;
+  --primary-hover: #2BC4B8;
+  --primary-dark: #1A9B8F;
+  --secondary-color: #F9D930;
+  --secondary-hover: #F4D025;
+  --secondary-dark: #E6C61A;
+  --accent-color: #f59e0b;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
+  
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  
+  /* Text colors */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  
+  /* Border colors */
+  --border-color: #e2e8f0;
+  
+  /* Shadows */
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Border radius */
+  --border-radius: 16px;
+  --border-radius-lg: 20px;
+  
+  /* Transitions */
+  --transition: all 0.2s ease;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --primary-color: #4AEFE2;
+  --primary-hover: #36E3D6;
+  --primary-dark: #2BC4B8;
+  --secondary-color: #FFE55C;
+  --secondary-hover: #F9D930;
+  --secondary-dark: #F4D025;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border-color: #334155;
+}
+
+/* Apply dark theme when body has dark-theme class */
+body.dark-theme {
+  --primary-color: #4AEFE2;
+  --primary-hover: #36E3D6;
+  --primary-dark: #2BC4B8;
+  --secondary-color: #FFE55C;
+  --secondary-hover: #F9D930;
+  --secondary-dark: #F4D025;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border-color: #334155;
 }

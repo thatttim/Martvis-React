@@ -1,0 +1,127 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  &.preloader--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__container {
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+
+    &-text {
+      font-family: 'Framework-Sans-Caps', 'Framework-Sans', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.2em;
+      animation: logoGlow 2s ease-in-out infinite alternate;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+
+    &-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite;
+
+      &:nth-child(1) {
+        border-top-color: var(--primary-color);
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        border-right-color: var(--secondary-color);
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(3) {
+        border-bottom-color: var(--primary-color);
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  &__text {
+    font-family: 'Framework-Sans', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoGlow {
+  from {
+    filter: drop-shadow(0 0 10px rgba(54, 227, 214, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(249, 217, 48, 0.5));
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+// Dark theme adjustments
+body.dark-theme .preloader {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+} 

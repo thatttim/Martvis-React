@@ -1,0 +1,229 @@
+.vehicle-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.vehicle-modal {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    max-height: 90vh;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  
+  @media (max-width: 768px) {
+    padding: 16px 20px;
+  }
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+.modal-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.modal-loading,
+.modal-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 16px;
+  color: var(--text-secondary);
+  
+  &.modal-error {
+    color: var(--error-color);
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.vehicle-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  
+  &:hover {
+    border-color: var(--primary-color);
+    background-color: var(--bg-secondary);
+    transform: translateY(-2px);
+  }
+  
+  &.selected {
+    border-color: var(--primary-color);
+    background-color: transparent;
+    color: var(--text-primary);
+    
+    .vehicle-icon {
+      filter: brightness(0) invert(1);
+    }
+    
+    .vehicle-code,
+    .vehicle-type {
+      color: var(--text-primary);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+}
+
+.vehicle-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.vehicle-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.vehicle-code {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.vehicle-type {
+  font-size: 14px;
+  color: var(--text-secondary);
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+.selected-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  
+  @media (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+  }
+} 

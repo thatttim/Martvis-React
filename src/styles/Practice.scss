@@ -1,0 +1,255 @@
+.practice-container {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 768px) {
+    margin: 0 10px;
+    min-height: calc(100vh - 60px);
+    padding: 15px;
+  }
+}
+
+.practice-content {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
+}
+
+.practice-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+.practice-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+.vehicle-reminder {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto 40px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.reminder-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 30px 20px;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
+}
+
+.reminder-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+}
+
+.reminder-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+
+.reminder-card p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.category-selection {
+  margin-bottom: 40px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+  min-height: 80px;
+  
+  &:hover {
+    border-color: var(--primary-color);
+    background-color: var(--bg-secondary);
+    transform: translateY(-2px);
+    
+    .category-arrow {
+      transform: translateX(4px);
+      color: var(--primary-color);
+    }
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 16px;
+    gap: 12px;
+    min-height: 70px;
+  }
+}
+
+.category-icon {
+  flex-shrink: 0;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  @media (max-width: 768px) {
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.category-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.2;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.category-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+.category-arrow {
+  font-size: 20px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 18px;
+  color: var(--text-secondary);
+  
+  &.error {
+    color: var(--error-color);
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    min-height: 150px;
+  }
+} 
