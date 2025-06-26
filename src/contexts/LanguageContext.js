@@ -144,7 +144,7 @@ export const LanguageProvider = ({ children }) => {
       selectVehicleFirst: 'ჯერ აირჩიე ტრანსპორტი',
       selectVehicleFromHeader: 'დააჭირე ტრანსპორტის ღილაკს სათაურში თქვენი ტრანსპორტის ტიპის ასარჩევად.',
       welcomeMessage: 'თეორიის გამოცდის სავარჯიშო პლატფორმა ფრეიმვორკისგან',
-      pageTitleHome: 'Martvis - სავარძლო ვარჯიში და გამოცდა',
+      pageTitleHome: 'Martvis - თეორიის გამოცდის სავარჯიშო პლატფორმა ფრეიმვორკისგან',
       pageTitlePractice: 'ვარჯიში - Martvis',
       pageTitleQuiz: 'ქვიზი - Martvis',
       pageTitleExam: 'გამოცდა - Martvis',
