@@ -2,7 +2,7 @@
 
 This project was created for the BTU React exam. It's a comprehensive React application that demonstrates various React concepts and modern web development practices.
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.03.30.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.30.png)
 
 ## 🚀 Technologies Used
 
@@ -15,7 +15,7 @@ This project was created for the BTU React exam. It's a comprehensive React appl
 - **Sass 1.89.2** - Advanced CSS preprocessor
 - **SCSS** - Syntactically Awesome Style Sheets
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.03.34.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.34.png)
 
 ### HTTP & API
 - **Axios 1.10.0** - HTTP client for API requests
@@ -23,7 +23,7 @@ This project was created for the BTU React exam. It's a comprehensive React appl
   - Base URL: `https://api.framework.ge/martvis/api`
   - Endpoints for vehicles, categories, languages, tickets, and exams
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.03.43.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.43.png)
 
 ### Development & Testing
 - **React Scripts 5.0.1** - Create React App build tools
@@ -33,7 +33,7 @@ This project was created for the BTU React exam. It's a comprehensive React appl
 - **@testing-library/dom 10.4.0** - DOM testing utilities
 - **Web Vitals 2.1.4** - Web performance metrics
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.03.49.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.49.png)
 
 ### Project Structure
 - **Context API** - State management with LanguageContext and ThemeContext
@@ -41,7 +41,7 @@ This project was created for the BTU React exam. It's a comprehensive React appl
 - **Component Architecture** - Modular component structure
 - **Service Layer** - API service abstraction
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.03.52.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.52.png)
 
 ## 🔌 API Integration
 
@@ -55,7 +55,7 @@ This project integrates with **Framework LLC's API** (`https://api.framework.ge/
 
 The API service is implemented in `src/services/apiService.js` using Axios for HTTP requests with proper error handling and timeout configuration.
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.03.55.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.55.png)
 
 ## 📁 Project Structure
 
@@ -91,7 +91,7 @@ martvis/
 └── README.md
 ```
 
-![Screenshot](screenshots/Screenshot 2025-06-27 at 01.04.00.png)
+![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.04.00.png)
 
 ## 🛠️ Setup Instructions
 
