@@ -84,7 +84,7 @@ export const LanguageProvider = ({ children }) => {
       cancel: 'Cancel',
       selectVehicleFirst: 'Select Vehicle First',
       selectVehicleFromHeader: 'Click the vehicle button in the header to select your vehicle type.',
-      welcomeMessage: 'Welcome to your driving test preparation platform',
+      welcomeMessage: 'Driving test preparation platform by Framework',
       pageTitleHome: 'Martvis - Driving Practice & Exam',
       pageTitlePractice: 'Practice - Martvis',
       pageTitleQuiz: 'Quiz - Martvis',
