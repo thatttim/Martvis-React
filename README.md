@@ -1,6 +1,6 @@
 # Martvis React Project
 
-This project was created for the BTU React exam. It's a comprehensive React application that demonstrates various React concepts and modern web development practices.
+It's a comprehensive React application that demonstrates various React concepts and modern web development practices.
 
 ![Screenshot](screenshots/Screenshot%202025-06-27%20at%2001.03.30.png)
 
@@ -153,15 +153,3 @@ This project demonstrates:
 - Component composition
 - Service layer architecture
 - Testing setup with React Testing Library
-
-## 📝 Notes
-
-This project was created as part of the BTU React exam requirements, showcasing proficiency in React development, modern JavaScript, and web development best practices.
-
-## 🤝 Contributing
-
-This is an exam project, but feel free to explore the code and learn from the implementation patterns used.
-
-## 📄 License
-
-This project is created for educational purposes as part of the BTU React exam. 
